@@ -15,25 +15,52 @@
         <link rel="stylesheet" href="{{ mix('css/icheck-bootstrap.css') }}">
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+    <body class="hold-transition sidebar-mini">
+        <div class="wrapper">
             @include('layouts.navigation')
 
-            <!-- Page Heading -->
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
+             
 
             <!-- Page Content -->
-            <main>
+            <div class="content-wrapper">
+                 
+                <div class="content-header">
+                    <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                        <h1 class="m-0"> {{ $header }}</h1>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                    </div><!-- /.container-fluid -->
+                </div>
+                
                 {{ $slot }}
-            </main>
+            </div>
+
+            <footer class="main-footer">
+                <!-- To the right -->
+                <div class="float-right d-none d-sm-inline">
+                  Anything you want
+                </div>
+                <!-- Default to the left -->
+                <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+              </footer>
         </div>
 
-        <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        
+        <script src="{{ mix('js/jquery.js') }}" defer></script>
+        <script src="{{ mix('js/jquery-ui.js') }}" defer></script>
+        <script src="{{ mix('js/bootstrap.bundle.min.js') }}" defer></script>
+        <script src="{{ mix('js/adminlte.min.js') }}" defer></script>
+
+        
+        
+
+        
+      
+        <!-- AdminLTE for demo purposes -->
+        <script src="{{ mix('js/demo.js')}}"></script>
     </body>
 </html>

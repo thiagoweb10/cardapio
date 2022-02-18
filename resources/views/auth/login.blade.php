@@ -6,7 +6,7 @@
            </div>
            <div class="card-body">
               <p class="login-box-msg">Sign in to start your session</p>
-              <form action="{{ route('login') }}" method="post">
+              <form action="{{ route('login') }}" method="POST">
                 @csrf
                  <div class="input-group mb-3">
                     <input type="email" class="form-control @error('email') is-invalid  @enderror" name="email" placeholder="E-mail">
