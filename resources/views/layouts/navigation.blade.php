@@ -46,11 +46,11 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+          
           <li class="nav-item">
             <x-nav-link href="{{ route('dashboard') }}" active="dashboard">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <i class="fas fa-home-lg"></i>
+                <i class="fas fa-solid fa-house-user"></i>
                 <p>
                     Home
                 </p>
@@ -58,49 +58,31 @@
           </li>
           <li class="nav-item">
             <x-nav-link href="#" active="">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                    Cardapio
-                </p>
+                <i class="fas fa-users"></i>
+                <p>Clientes</p>
             </x-nav-link>
           </li>
-          <!--
-            <li class="nav-item menu-open">
-                <a href="#" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                    Starter Pages
-                    <i class="right fas fa-angle-left"></i>
-                </p>
-                </a>
-                <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Active Page</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Inactive Page</p>
-                    </a>
-                </li>
-                </ul>
-            </li>
-          -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
+            <x-nav-link href="#" active="">
+                <i class="fas fa-list"></i>
+                <p>Categorias</p>
+            </x-nav-link>
           </li>
+          <li class="nav-item">
+            <x-nav-link href="#" >
+                <i class="fas fa-th-list"></i>
+                <p>Produtos</p>
+            </x-nav-link>
+          </li>
+          <li class="nav-item">
+            <x-nav-link href="#" active="">
+                
+                <i class="fas fa-shopping-basket"></i>
+                <p> Pedidos </p>
+            </x-nav-link>
+          </li>
+          
         </ul>
       </nav>
-      <!-- /.sidebar-menu -->
     </div>
-    <!-- /.sidebar -->
   </aside>

@@ -14,14 +14,13 @@
         <link rel="stylesheet" href="{{ mix('css/fontawesome.css') }}">
         <link rel="stylesheet" href="{{ mix('css/icheck-bootstrap.css') }}">
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        
 
 
     </head>
     <body class="hold-transition sidebar-mini">
         <div class="wrapper">
             @include('layouts.navigation')
-
-             
 
             <!-- Page Content -->
             <div class="content-wrapper">
@@ -40,27 +39,18 @@
             </div>
 
             <footer class="main-footer">
-                <!-- To the right -->
-                <div class="float-right d-none d-sm-inline">
-                  Anything you want
+                <strong>Copyright © 2022 <a href="{{ route('dashboard') }}"> {{ config('app.name') }}</a>.</strong>
+                Todos os direitos reservados.
+                <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 3.2.0
                 </div>
-                <!-- Default to the left -->
-                <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-              </footer>
+            </footer>
         </div>
-
         
         <script src="{{ mix('js/jquery.js') }}" defer></script>
         <script src="{{ mix('js/jquery-ui.js') }}" defer></script>
         <script src="{{ mix('js/bootstrap.bundle.min.js') }}" defer></script>
         <script src="{{ mix('js/adminlte.min.js') }}" defer></script>
-
-        
-        
-
-        
-      
-        <!-- AdminLTE for demo purposes -->
         <script src="{{ mix('js/demo.js')}}"></script>
     </body>
 </html>
