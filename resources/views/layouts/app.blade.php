@@ -51,6 +51,5 @@
         <script src="{{ mix('js/jquery-ui.js') }}" defer></script>
         <script src="{{ mix('js/bootstrap.bundle.min.js') }}" defer></script>
         <script src="{{ mix('js/adminlte.min.js') }}" defer></script>
-        <script src="{{ mix('js/demo.js')}}"></script>
     </body>
 </html>

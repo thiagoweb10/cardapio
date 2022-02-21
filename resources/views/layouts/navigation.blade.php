@@ -28,7 +28,7 @@
     <!-- Brand Logo -->
     <a href="{{ route('dashboard') }}" class="brand-link">
       <img src="{{ asset('img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">Cardapio On-line</span>
     </a>
 
     <!-- Sidebar -->
@@ -49,39 +49,55 @@
           
           <li class="nav-item">
             <x-nav-link href="{{ route('dashboard') }}" active="dashboard">
-                <i class="fas fa-home-lg"></i>
                 <i class="fas fa-solid fa-house-user"></i>
-                <p>
-                    Home
-                </p>
+                <p>Home</p>
             </x-nav-link>
           </li>
-          <li class="nav-item">
-            <x-nav-link href="#" active="">
-                <i class="fas fa-users"></i>
-                <p>Clientes</p>
-            </x-nav-link>
-          </li>
-          <li class="nav-item">
-            <x-nav-link href="#" active="">
-                <i class="fas fa-list"></i>
-                <p>Categorias</p>
-            </x-nav-link>
-          </li>
-          <li class="nav-item">
-            <x-nav-link href="#" >
-                <i class="fas fa-th-list"></i>
-                <p>Produtos</p>
-            </x-nav-link>
-          </li>
-          <li class="nav-item">
-            <x-nav-link href="#" active="">
-                
-                <i class="fas fa-shopping-basket"></i>
-                <p> Pedidos </p>
-            </x-nav-link>
-          </li>
-          
+
+		  @if (auth()->user()->hasRole('Admin'))
+		  
+			<li class="nav-item">
+			<x-nav-link href="#" active="">
+				<i class="fas fa-users"></i>
+				<p>Colaboradores</p>
+			</x-nav-link>
+			</li>
+
+			<li class="nav-item">
+			<x-nav-link href="#" active="">
+				<i class="fas fa-users"></i>
+				<p>Clientes</p>
+			</x-nav-link>
+			</li>
+
+			<li class="nav-item">
+			<x-nav-link href="#" active="">
+				<i class="fas fa-list"></i>
+				<p>Categorias</p>
+			</x-nav-link>
+			</li>
+
+			<li class="nav-item">
+			<x-nav-link href="#" >
+				<i class="fas fa-th-list"></i>
+				<p>Produtos</p>
+			</x-nav-link>
+			</li>
+
+			<li class="nav-item">
+			<x-nav-link href="#" active="">
+				<i class="fas fa-shopping-basket"></i>
+				<p> Pedidos </p>
+			</x-nav-link>
+			</li>
+
+			<li class="nav-item">
+			<x-nav-link href="#" active="">
+				<i class="fas fa-cog"></i>
+				<p> Configurações </p>
+			</x-nav-link>
+			</li>
+          @endif
         </ul>
       </nav>
     </div>
