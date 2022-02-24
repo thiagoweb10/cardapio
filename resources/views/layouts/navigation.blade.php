@@ -71,7 +71,7 @@
 			</li>
 
 			<li class="nav-item">
-			<x-nav-link href="#" active="">
+			<x-nav-link href="{{ route('admin.categories.index') }}" active="admin.categories.*">
 				<i class="fas fa-list"></i>
 				<p>Categorias</p>
 			</x-nav-link>
