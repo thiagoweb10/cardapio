@@ -78,7 +78,7 @@
 			</li>
 
 			<li class="nav-item">
-			<x-nav-link href="#" >
+			<x-nav-link href="{{ route('admin.products.index') }}" active="admin.products.*" >
 				<i class="fas fa-th-list"></i>
 				<p>Produtos</p>
 			</x-nav-link>

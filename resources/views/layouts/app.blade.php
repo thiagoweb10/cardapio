@@ -48,9 +48,7 @@
             </footer>
         </div>
         
-        <script src="{{ mix('js/jquery.js') }}" defer></script>
-        <script src="{{ mix('js/jquery-ui.js') }}" defer></script>
-        <script src="{{ mix('js/bootstrap.bundle.min.js') }}" defer></script>
-        <script src="{{ mix('js/adminlte.min.js') }}" defer></script>
+        <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="https://unpkg.com/vanilla-masker@1.1.1/lib/vanilla-masker.js"></script>
     </body>
 </html>
