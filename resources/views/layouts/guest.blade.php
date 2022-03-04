@@ -13,10 +13,12 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+        @stack('css')
+
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="login-page">
+    <body class="{{ $class }}">
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>

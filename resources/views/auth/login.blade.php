@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-guest-layout class="hold-transition login-page">
     <div class="login-box">
         <div class="card card-outline card-primary">
            <div class="card-header text-center">
