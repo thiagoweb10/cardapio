@@ -9,7 +9,12 @@ class Order extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['client_id','ype_payment_id','date','delivery','description'];
+    protected $fillable = ['client_id','type_payment_id','date','delivery','description'];
+
+    protected $casts = [
+        'date' => 'date',
+        'delivery' => 'boolean'
+    ];
 
     public function client()
     {
@@ -23,7 +28,12 @@ class Order extends Model
 
     public function products()
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Product::class,'product_order','order_id','product_id');
+    }
+
+    public function getDeliveryAttribute()
+    {
+        return $this->attributes['delivery'] ? 'Sim' : 'Não';
     }
 
 }

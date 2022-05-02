@@ -15,4 +15,15 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+    
+    public function scopeIsActive($query)
+    {
+        $query->where('status', 'active');
+    }
+
+    public function scopeIsInative($query)
+    {
+        $query->where('status', 'inative');
+    }
+
 }

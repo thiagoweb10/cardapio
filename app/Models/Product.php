@@ -22,11 +22,9 @@ class Product extends Model
         return $this->belongsToMany(Order::class);
     }
 
-    
-
-    public function getPriceAttribute($value)
+    public function getPriceParseAttribute($value)
     {
-            $fmt = numfmt_create('pt-BR', NumberFormatter::CURRENCY);
-            return numfmt_format_currency($fmt, $this->attributes['price'], 'BRL');
+        $fmt = numfmt_create('pt-BR', NumberFormatter::CURRENCY);
+        return numfmt_format_currency($fmt, $this->attributes['price'], 'BRL');
     }
 }

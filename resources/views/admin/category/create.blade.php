@@ -23,7 +23,7 @@
                                 <select name="status" id="status" class="form-control @error('status') is-invalid @enderror">
                                     <option value="" selected> Selecione</option>
                                     <option value="active">Ativo</option>
-                                    <option value="inactive">Inativo</option>
+                                    <option value="inative">Inativo</option>
                                 </select>
                                 
                                 @error('status')

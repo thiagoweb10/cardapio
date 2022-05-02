@@ -4,6 +4,10 @@
     background-color: red;
 }
 
+.header-container {
+    gap: 12px;
+}
+
 .header  .header_type .contact {
     gap: 15px;
 }

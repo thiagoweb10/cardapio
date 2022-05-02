@@ -18,6 +18,7 @@ mix.css('resources/css/app.css', 'public/css');
 
 mix.js([
     'resources/js/plugins/bootstrap/js/bootstrap.bundle.js',
+    'resources/js/plugins/mask.js',
     'resources/js/app.js'
 ],  'public/js/app.js');
 
