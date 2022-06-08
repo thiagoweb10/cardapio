@@ -10,7 +10,6 @@ use App\Models\TypePayment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Menu\CheckoutRequest;
-use App\Models\OrderProduct;
 
 class HomeController extends Controller
 {
@@ -61,7 +60,10 @@ class HomeController extends Controller
                 ]);
             }
 
+            $this->getItemsCarNotification($products);
+
             session()->put('cart', $products);
+            
             
             return redirect()->route('menu.cart');
         }
@@ -73,6 +75,7 @@ class HomeController extends Controller
             'quantity' => 1
         ]));
         
+        
         return redirect()->route('menu.cart');
     }
 
@@ -83,6 +86,9 @@ class HomeController extends Controller
         $products->splice($index, 1);
 
         session()->put('cart', $products);
+
+        $this->getItemsCarNotification($products);
+        
 
         return back();
     }
@@ -97,10 +103,6 @@ class HomeController extends Controller
 
         $client->address()->create($data);
 
-
-
-
-
         $data['client_id'] = $client->id;
 
         $order = Order::create($data);
@@ -111,27 +113,21 @@ class HomeController extends Controller
         $url ="https://wa.me/5511984477234";
         $pedido = $order->products->pluck('name')->join(', ',' e ');
 
-        
-
-
-        
-
-        $total = $order->products->sum(function($product){
-            dd($product);
-            return $product->price * $product->pivot->quantity;
-        });
-
-        
-
         $text = "Um pedido feito com sucesso!";
                 
         $text .="Nome: {$client->name},";
         $text .="Endereço: {$client->address->place}";      
         $text .="Pedido: {$pedido}";
-        $text .="Total:  {$total}";
-            
+        $text .="Total:  {$order->total}";
+        
+        session()->forget('cart');
 
         return redirect()->to($url.'?text='.urlencode($text));
+    }
+
+    public function getItemsCarNotification($products)
+    {   
+        session()->put('itemsCar', array_sum(array_column($products->toArray(),'quantity')));
     }
 
     protected function prepareProductsRelation()

@@ -27,4 +27,9 @@ class Product extends Model
         $fmt = numfmt_create('pt-BR', NumberFormatter::CURRENCY);
         return numfmt_format_currency($fmt, $this->attributes['price'], 'BRL');
     }
+
+    public function scopeIsActive($query)
+    {
+        $query->where('status', 'active');
+    }
 }

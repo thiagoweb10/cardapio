@@ -1,10 +1,14 @@
 <x-guest-layout>
     @push('css')
         <link rel="stylesheet" href="{{ mix('css/cardapio.css') }}" >
-    @endpush    
+    @endpush  
 <x-header />
-
-<h2 class="mt-4 mb-3 ml-5 font-weight-bold">Mais Pedidos</h2>
+<h1 class="mt-2 ml-4 font-weight-bold">Menu</h1>
+<form action="#">
+    <div class="d-flex justify-content-center mt-1 p-4">
+        <input type="text" id="search"  class="form-control" placeholder="Pesquisar">
+    </div>
+</form>
 
 <section id="produtos">
     @foreach ($categories as $category )
@@ -15,7 +19,7 @@
                 <h4 class="font-weight-bold text-color-price">R$ {{ number_format($product->price,2,",",".") }}</h4>
                 <div class="text-center">
                     <a href="{{ route('menu.cart.add', $product->id) }}">
-                        <p class="font-weight-bold bto-adicionar text-center">&nbsp; Adicionar Ao Carrinho &nbsp;</p>
+                        <p class="font-weight-bold bto-adicionar text-center">&nbsp; Adicionar &nbsp;</p>
                     </a>
                 </div>
             </section>

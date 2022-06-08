@@ -9,10 +9,13 @@ class CheckoutRequest extends FormRequest
 {
     public function prepareForValidation()
     {
-        $this->request->add(['date' => Carbon::now()->toDateTimeString()]);
+        $this->request->add([
+            'date' => Carbon::now()->toDateTimeString()
+        ]);
  
         $this->merge([
-            'delivery' => $this->delivery == 'true' ? true : false
+            'delivery' => $this->delivery == 'true' ? true : false,
+            'type_payment_id' => is_null( $this->type_payment_id) ? '1': $this->type_payment_id
         ]);
     }
     /**
