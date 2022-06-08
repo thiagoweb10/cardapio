@@ -31,7 +31,8 @@ php artisan serve
 PHP 7.4+<br>
 Composer<br>
 Laravel 8<br>
+Vanilla-masker<br>
 MySQL
 
 <br><br>
-Made with :blue_heart:  by Thiago Melo :wave: [see my LinkedIn](https://www.linkedin.com/in/thiago-melo-10/)
+Made with :blue_heart:  by Thiago Melo :wave: see my [LinkedIn](https://www.linkedin.com/in/thiago-melo-10/)
