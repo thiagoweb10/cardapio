@@ -1,5 +1,10 @@
  # App Food Delivery
+<br>
+<p align="center">
+  <img src="https://github.com/thiagoweb10/food-delivery/blob/main/public/img/food-delivery.jpg?raw=true">
+</p> 
 
+<br>
 
 ### Descrição
 
