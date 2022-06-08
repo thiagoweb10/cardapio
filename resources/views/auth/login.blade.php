@@ -1,11 +1,11 @@
-<x-guest-layout>
+<x-guest-layout class="hold-transition login-page">
     <div class="login-box">
         <div class="card card-outline card-primary">
            <div class="card-header text-center">
               <a href="{{ route('home') }}" class="h4"><b>Cardapio</b> <h6>Online</h6></a>
            </div>
            <div class="card-body">
-              <p class="login-box-msg">Sign in to start your session</p>
+              <p class="login-box-msg">Faça login para iniciar sua sessão</p>
               <form action="{{ route('login') }}" method="POST">
                 @csrf
                  <div class="input-group mb-3">
@@ -45,14 +45,6 @@
                  </div>
               </form>
               
-              <div class="social-auth-links text-center mt-2 mb-3">
-                 <a href="#" class="btn btn-block btn-primary">
-                    <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-                 </a>
-                 <a href="#" class="btn btn-block btn-danger">
-                    <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-                 </a>
-              </div>
               <p class="mb-1">
                  <a href="{{ route('password.request') }}">I forgot my password</a>
               </p>

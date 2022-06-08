@@ -12,6 +12,7 @@
                 <thead>
                     <tr>
                         <th style="width: 10px">Codigo</th>
+                        <th>Categoria</th>
                         <th>Nome</th>
                         <th>Preço</th>
                         <th colspan="2" style="width: 5px">Ações</th>
@@ -21,6 +22,7 @@
                     @foreach ($products as $product)
                     <tr>
                         <td>{{ $product->id }}</td>
+                        <td>{{ $product->category->name }}</td>
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->price }}</td>
                         <td> 

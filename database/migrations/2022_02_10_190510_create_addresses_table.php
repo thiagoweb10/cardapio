@@ -18,6 +18,7 @@ class CreateAddressesTable extends Migration
             $table->morphs('owner');
             $table->char('zipcode');
             $table->string('address');
+            $table->integer('number');
             $table->string('neighborhood');
             $table->string('city');
             $table->string('state');

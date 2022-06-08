@@ -24,7 +24,7 @@
                                 <select name="status" id="status" class="form-control @error('status') is-invalid @enderror">
                                     <option value=""> Selecione</option>
                                     <option value="active"   {{ $category->status == 'active'   ? 'selected':'' }}>Ativo</option>
-                                    <option value="inactive" {{ $category->status == 'inactive' ? 'selected':'' }}>Inativo</option>
+                                    <option value="inative" {{ $category->status == 'inative' ? 'selected':'' }}>Inativo</option>
                                 </select>
                                 @error('status')
                                     <span class="error invalid-feedback">{{ $message }}</span>

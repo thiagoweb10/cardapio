@@ -12,13 +12,17 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
-        <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        <link rel="stylesheet" href="{{ mix('css/fontawesome.css') }}">
+        
+        @stack('css')
     </head>
-    <body class="login-page">
+    <body class="{{ $class }}">
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
+    
+        <!-- Scripts -->
+        <script src="{{ mix('js/app.js') }}" defer></script>
+        @stack('scripts')
     </body>
 </html>
